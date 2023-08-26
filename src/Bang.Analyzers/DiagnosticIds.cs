@@ -50,7 +50,6 @@ public static class Diagnostics
         }
     }
 
-    // TODO(heytherewill): Implement these.
     public static class Attributes
     {
         public static class NonComponentsOnFilterAttribute
@@ -65,7 +64,7 @@ public static class Diagnostics
             public const string Message = "Filter attribute expects only messages.";
         }
 
-        public static class NonMessagesMessagerAttribute
+        public static class NonMessagesOnMessagerAttribute
         {
             public const string Id = "BANG3003";
             public const string Message = "Messager attribute expects only messages.";
@@ -90,6 +89,15 @@ public static class Diagnostics
         {
             public const string Id = "BANG4002";
             public const string Message = "Messages must be declared as readonly.";
+        }
+    }
+
+    public static class World
+    {
+        public static class MarkUniqueComponentAsUnique
+        {
+            public const string Id = "BANG5001";
+            public const string Message = "Trying to get an unique component not marked with the Unique attribute.";
         }
     }
 }
